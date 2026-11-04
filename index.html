@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Bio Link | Kết nối cùng tôi</title>
+  <title>Thu Hà (@wagthuha206) | Bio Link</title>
   <meta name="description" content="Trang liên kết bio cá nhân - TikTok, Donate, Mạng xã hội">
   
   <!-- Tailwind CSS CDN -->
@@ -48,10 +48,10 @@
       <!-- Khung Avatar bo tròn viền kép thanh lịch -->
       <div class="relative group">
         <div class="w-24 h-24 rounded-full p-1 bg-white shadow-md shadow-slate-200/80 ring-1 ring-slate-200/60 transition-transform duration-300 group-hover:scale-105">
-          <!-- Thay đường dẫn ảnh của bạn tại src: assets/avatar.png -->
           <img 
-            src="assets/avatar.svg" 
-            alt="Avatar" 
+            src="assets/avatar.jpg" 
+            onerror="this.onerror=null; this.src='assets/avatar.svg';"
+            alt="Thu Hà" 
             class="w-full h-full object-cover rounded-full"
             loading="eager"
           />
@@ -62,7 +62,7 @@
       <div class="flex items-center gap-1.5 mt-4">
         <!-- THAY TÊN CỦA BẠN TẠI ĐÂY -->
         <h1 class="text-xl font-bold tracking-tight text-slate-900">
-          Tên Của Bạn
+          Thu Hà
         </h1>
         
         <!-- Icon Tick Xanh Xác Thực (Verified Badge) -->
@@ -76,7 +76,7 @@
       <!-- Dòng giới thiệu (Bio) -->
       <!-- THAY TIỂU SỬ NGẮN CỦA BẠN TẠI ĐÂY -->
       <p class="text-sm text-slate-500 mt-2 max-w-xs leading-relaxed">
-        Sáng tạo nội dung • Chia sẻ những điều thú vị mỗi ngày ✨ Ghé thăm kênh của mình nhé!
+        🌸 Ghé thăm kênh TikTok của mình hoặc mời mình một ly cà phê nhé! ☕✨
       </p>
     </header>
 
@@ -89,7 +89,7 @@
       <!-- 2. THAY LINK TIKTOK CỦA BẠN TẠI ĐÂY                    -->
       <!-- ====================================================== -->
       <a 
-        href="https://www.tiktok.com/@username" 
+        href="https://www.tiktok.com/@wagthuha206" 
         target="_blank" 
         rel="noopener noreferrer"
         class="group w-full bg-slate-900 hover:bg-black text-white p-4 rounded-2xl flex items-center justify-between shadow-lg shadow-slate-900/10 hover:shadow-xl hover:shadow-slate-900/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
@@ -102,8 +102,8 @@
             </svg>
           </div>
           <div class="text-left">
-            <div class="font-semibold text-sm text-white">Xem Kênh TikTok</div>
-            <div class="text-xs text-slate-300">@username • Nhấn để theo dõi</div>
+            <div class="font-semibold text-sm text-white">Xem Kênh TikTok của Hà</div>
+            <div class="text-xs text-slate-300">@wagthuha206 • Nhấn để theo dõi</div>
           </div>
         </div>
         <!-- Mũi tên chuyển hướng -->
@@ -189,11 +189,11 @@
 
       <!-- Khung hiển thị Ảnh Mã QR -->
       <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 mb-4 inline-block w-full max-w-[220px]">
-        <!-- Thay ảnh mã QR thật của bạn tại assets/qr-donate.png -->
         <img 
           id="qrImage" 
-          src="assets/qr-donate.svg" 
-          alt="Mã QR Donate" 
+          src="assets/qr-donate.jpg" 
+          onerror="this.onerror=null; this.src='assets/qr-donate.svg';"
+          alt="Mã QR Donate TPBank" 
           class="w-full h-auto aspect-square object-contain rounded-xl shadow-sm"
         />
       </div>
@@ -204,18 +204,15 @@
       <div class="bg-slate-50 rounded-2xl p-3.5 text-left border border-slate-200/60 mb-4 space-y-1.5">
         <div class="flex justify-between items-center text-xs">
           <span class="text-slate-500">Ngân hàng:</span>
-          <!-- Thay tên ngân hàng / MoMo của bạn -->
-          <span class="font-semibold text-slate-800">MB Bank (Quân Đội)</span>
+          <span class="font-semibold text-slate-800">TPBank (Tiên Phong)</span>
         </div>
         <div class="flex justify-between items-center text-xs">
           <span class="text-slate-500">Chủ tài khoản:</span>
-          <!-- Thay họ tên của bạn -->
-          <span class="font-semibold text-slate-800">NGUYEN VAN A</span>
+          <span class="font-semibold text-slate-800">LE THI THU HA</span>
         </div>
         <div class="flex justify-between items-center text-xs pt-1 border-t border-slate-200/60">
           <span class="text-slate-500">Số tài khoản:</span>
-          <!-- Thay số tài khoản của bạn tại đây -->
-          <span id="accountNumber" class="font-bold text-slate-900 tracking-wider">0123456789</span>
+          <span id="accountNumber" class="font-bold text-slate-900 tracking-wider">1000 4316 225</span>
         </div>
       </div>
 
@@ -237,7 +234,7 @@
 
   <!-- Chân trang (Footer) -->
   <footer class="py-6 text-center text-xs text-slate-400">
-    <p>© 2026 • Trang Bio Link cá nhân</p>
+    <p>© 2026 Thu Hà • My Bio Link</p>
   </footer>
 
   <!-- ========================================================== -->
@@ -274,7 +271,7 @@
 
     // Sao chép số tài khoản vào bộ nhớ đệm
     function copyAccountNumber() {
-      const accText = document.getElementById('accountNumber').innerText.trim();
+      const accText = document.getElementById('accountNumber').innerText.trim().replace(/\s+/g, '');
       const btn = document.getElementById('copyBtn');
       const textSpan = document.getElementById('copyBtnText');
       const originalText = textSpan.innerText;
