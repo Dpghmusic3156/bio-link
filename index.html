@@ -138,19 +138,6 @@
         </span>
       </button>
 
-      <!-- ====================================================== -->
-      <!-- NÚT SAO CHÉP LINK TRANG BIO                            -->
-      <!-- ====================================================== -->
-      <button 
-        type="button" 
-        onclick="copyBioPageUrl(this)"
-        class="w-full bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 py-3 px-4 rounded-xl text-xs font-medium flex items-center justify-center gap-2 transition-colors duration-200"
-      >
-        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-        </svg>
-        <span id="copyPageText">Sao chép liên kết trang này</span>
-      </button>
 
     </section>
 
@@ -321,23 +308,6 @@
       document.body.removeChild(textarea);
     }
 
-    // Sao chép liên kết trang hiện tại
-    function copyBioPageUrl(btnElement) {
-      const url = window.location.href;
-      const span = document.getElementById('copyPageText');
-      const originalText = span.innerText;
-
-      function onSuccess() {
-        span.innerText = '✓ Đã sao chép link trang!';
-        setTimeout(() => { span.innerText = originalText; }, 2000);
-      }
-
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(url).then(onSuccess).catch(() => fallbackCopy(url, onSuccess));
-      } else {
-        fallbackCopy(url, onSuccess);
-      }
-    }
   </script>
 </body>
 </html>
