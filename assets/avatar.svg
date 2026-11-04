@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bgGrad)" />
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.8" />
+  <!-- Head & Torso Silhouette -->
+  <g fill="url(#avatarGrad)">
+    <circle cx="100" cy="80" r="38" />
+    <path d="M 40 175 C 40 135, 70 125, 100 125 C 130 125, 160 135, 160 175 Z" />
+  </g>
+</svg>
